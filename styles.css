@@ -1,0 +1,309 @@
+:root {
+    --background-color: #00090E;
+    --text-color: #E1E1E1;
+    --primary-color: #81FE88;
+    --secondary-color: #888888;
+    --tag-color: #171D1F;
+    --font-family: "Prompt", sans-sarif; 
+    --itens-background: #171D1F; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    height: 100vh;
+    gap: 27px;
+    padding: 56px 0;
+}
+
+aside {
+    height: 100%;
+    width: 12em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 2em 1em;
+    background-color: var(--itens-background);
+    border-radius: 10px;
+}
+
+nav {
+    margin: 3em;
+}
+
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+    list-style-type: none;
+    margin-top: 2em;
+}
+
+.link-destaque {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1em 2.5em;
+}
+
+.lista-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.lista-links li a {
+    font-size: 18px;
+}
+
+main {
+    background-color: var(--itens-background);
+    border-radius: 10px;
+    padding: 2em;
+    display: flex;
+    gap: 1.5em;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+form div label {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+/* Remove o fundo branco e mantém as cores do seu projeto */
+form div input:-webkit-autofill,
+form div input:-webkit-autofill:hover, 
+form div input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--background-color); /* Cor da letra */
+    transition: background-color 5000s ease-in-out 0s; /* "Truque" para o fundo não mudar */
+    box-shadow: 0 0 0px 1000px var(--secondary-color) inset; /* Preenche o fundo com a sua cor */
+}
+
+/* Garante que a fonte não mude */
+form div input:-webkit-autofill {
+    font-family: var(--font-family) !important;
+    font-size: 1rem !important; /* Ajuste conforme seu padrão */
+}
+
+form div input, textarea {
+    width: 100%;
+    padding: 0.5em 1em;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-family);
+    line-height: 22.5px;
+    font-family: var(--font-family);
+    font-size: 1rem !important;
+}
+
+form div input {
+    height: 2em;
+}
+
+form div textarea {
+    height: 10em;
+}
+
+.lista-tags li {
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    gap: 10px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.lista-tags li:hover {
+    cursor: pointer;
+    background-color: #b6b6b6;
+}
+
+.remove-tag {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-tag:hover {
+    transform: scale(1.3);
+    filter: brightness(1.2);
+}
+
+.lista-tags {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.container-botoes {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.container-botoes button {
+    width: 50%;
+    padding: 12px 32px 12px 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 500px;
+}
+
+.botao-descartar {
+    background-color: var(--itens-background);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botao-descartar:hover {
+    background-color: #2a3031;
+    font-size: 18.5px;
+}
+
+.botao-descartar::after {
+    content: "";
+    background-image: url("./img/trash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.botao-publicar {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botao-publicar:hover {
+    background-color: #4af753;
+    font-size: 18.5px;
+}
+
+.botao-publicar::after {
+    content: "";
+    background-image: url("./img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.container-descricao {
+    width: 422px;
+}
+
+.main-imagem {
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-imagem {
+    height: 368px;
+    padding: 24px 16px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container-upload-imagem button {
+    margin: 16px 0 8px;
+    width: 100%;
+    background-color: var(--itens-background);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container-upload-imagem button:after {
+    content: "";
+    background-image: url("./img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.container-imagem-nome {
+    display: flex;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-size: 15px;
+}
+
+.container-imagem-nome img {
+    transition: all 0.3s ease;
+}
+
+.container-imagem-nome img:hover {
+    cursor: pointer;
+    width: 0.7em;
+}
