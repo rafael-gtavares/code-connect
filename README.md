@@ -37,12 +37,14 @@ Você pode conferir o projeto rodando através do link abaixo:
 > [!IMPORTANT]
 > 🔗 **CLIQUE NO LINK ABAIXO PARA ACESSAR O PROJETO:**
 > 
-> 👉 **[COLE_O_SEU_LINK_AQUI](https://rafael-gtavares.github.io/code-connect/)** 👈
+> 👉 **[CodeConnect](https://rafael-gtavares.github.io/code-connect/)** 👈
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## ⚠️ Observações sobre Responsividade
 
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/SEU_USUARIO/code-connect.git](https://github.com/SEU_USUARIO/code-connect.git)
+Este projeto foi desenvolvido com foco exclusivo na experiência de uso em **Desktop (computadores)**. 
+* Atualmente, o layout **não possui suporte para dispositivos móveis** (celulares e tablets).
+* O objetivo principal desta versão foi a implementação das lógicas de programação assíncrona e manipulação de dados via JavaScript.
+
+---
